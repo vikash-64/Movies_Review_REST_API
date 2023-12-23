@@ -1,7 +1,8 @@
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters
 from .models import Movie, Review
 from .serializers import MovieSerializer, ReviewSerializer
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 class MovieListCreateView(generics.ListCreateAPIView):
     queryset = Movie.objects.all()
